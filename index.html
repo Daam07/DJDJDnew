@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Modo Oscuro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/WhatsApp Image 2024-07-08 at 09.09.18.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Black+Ops+One&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Black+Ops+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* Modo oscuro para todo el body */
+        .dark-mode {
+            background-color: #121212; /* Fondo oscuro para todo el body */
+            color: #ffffff; /* Texto blanco para todo el body */
+        }
+
+        /* Cambiar los enlaces en el navbar */
+        .dark-mode a.nav-link {
+            color: #ffffff;
+        }
+
+        /* Cambiar el fondo del navbar */
+        .dark-mode .navbar {
+            background-color: #1c1c1c;
+        }
+
+        /* Cambiar el color del botón */
+        .dark-mode .btn-outline-dark {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo de botones o formularios */
+        .dark-mode .form-control, .dark-mode .btn {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            border-color: #444444;
+        }
+
+        h1{
+        font-family: "Black Ops One", system-ui;
+        font-size: 45px;
+    }
+    h4,h3{
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 23px;
+        
+    }   
+    h2{
+        font-family: "Black Ops One", system-ui;
+    }
+    
+    
+    .intro{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .intro2{
+        display: flex;
+        justify-content: end;
+        
+    }
+
+    .vision{
+      display: flex;
+      
+      text-align: center;
+    }
+
+    .card {
+    transition: transform 0.4s ease-in-out;
+    }
+
+    .card:hover {
+    transform: scale(1.04);
+    }
+
+    .cartas{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .custom-table {
+        max-width: 600px;
+        margin: auto; 
+    }
+    .custom-table thead th {
+        background-color: #4d4d4d; 
+        color: #fff; 
+    }   
+
+    .redes {
+        background-color: rgb(76, 76, 74);
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap; /* Permite que los íconos se ajusten en nuevas líneas si es necesario */
+        justify-content: center; /* Centra los íconos en el contenedor */
+    }
+
+    .redes img {
+        width: 40px;
+        
+        border-radius: 50%;
+        margin: 5px;
+        border: none;
+        padding: 0;
+        
+    }
+
+    .redes img {
+        transition: transform 0.3s ease, filter 0.3s ease; /* Añade transición suave */
+        width: 40px; /* Tamaño de las imágenes (ajusta según sea necesario) */
+        height: 40px; /* Mantiene la proporción de la imagen */
+        margin: 5px; /* Espaciado entre imágenes */
+    }
+
+    .redes img:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al pasar el puntero */
+        filter: brightness(1.2); /* Aumenta el brillo al pasar el puntero */
+    }
+        
+
+    /* */
+
+    body {
+    background:  #f0f0f0, #d3d3d3
+    }
+
+    h1, h2, h3, h4 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid #ccc;
+    }
+
+
+    .btn-primary {
+        background-color: #ff5733;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #c70039;
+    }
+
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    h1, h2, h3 {
+        animation: fadeIn 2s ease-in;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-item {
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black; /* Cambia el color de las flechas a negro */
+        border-radius: 50%; /* Hace que las flechas tengan un fondo redondeado */
+    }
+
+    .some-class {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h1, h2, h3, p {
+    transition: color 1.3s ease;
+    }
+
+    body{
+        transition: color 0.4s ease;
+    }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top data-bs-theme"light"">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#inicio"><img src="img/WhatsApp Image 2024-07-08 at 09.09.18.jpeg" alt="" width="60px" style="border-radius: 60%;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#servi">Nuestros Servicios</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="#redes">Contactos</a>
+                </li>
+  
+                <li class="nav-item">
+                  <!-- Botón para activar el modo oscuro -->
+                  <button id="darkModeToggle" class="btn btn-outline-dark ms-3">Modo Oscuro</button>
+              </li>
+                
+              </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center" id="inicio">
+        <br><br><br><br><br>
+        <img src="img/WhatsApp Image 2024-07-08 at 09.09.18.jpeg" alt="" width="200px" style="border-radius: 50%;">
+        <br><br>
+
+        <h1>PERSPECTIVA</h1>
+        <h4>DISEÑO Y CONSTRUCCIÓN</h4>
+
+        <br><br>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-indicators ">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://picsum.photos/400/200" class="" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/400/201" class="" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://picsum.photos/400/202" class="" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+          
+          <br><br>
+          <h3>DJDJD Contratistas Generales SAC</h3>
+          <br>
+          <hr>
+          <br>
+          
+          <div class="texto">
+            <p>Somos una empresa constructora peruana que iniciamos nuestras actividades hace 5 años, participando en el desarrollo y ejecución de proyectos de ingenieria en el sector público y privado, contamos con personal ejecutivo y operativo capacidad a todo nivel.</p>
+            <br>
+            <h2>MISIÓN</h2>
+            <br>
+            <p>Ser una empresa constructora que se basa en la gestión de la calidad, seguridad y salud ocupacional y respeto al medio ambiente.</p>
+            <br>
+            <h2>VISIÓN</h2>
+            <br>
+            <p>Ser una empresa líder en el sector construcción a nivel nacional.</p>
+          </div>
+            <br>
+            <hr> 
+          
+            <br><br><br><br>
+
+            <div id="carouselExampleIndicators2" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://picsum.photos/400/200" class="" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/400/201" class="" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://picsum.photos/400/202" class="" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          
+
+          <br><br><br>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card text-bg-dark" style="max-width: 18rem;">
+                <div class="card-header border">SEGURIDAD EN EL TRABAJO</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card text-bg-dark" style="max-width: 18rem;">
+                <div class="card-header border">PUNTUALIDAD</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card text-bg-dark" style="max-width: 18rem;">
+                <div class="card-header border">CUIDADO DEL MEDIO AMBIENTE</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card text-bg-dark" style="max-width: 18rem;">
+                <div class="card-header border">LABOR EN EQUIPO</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card text-bg-dark" style="max-width: 18rem;">
+                <div id="servi" class="card-header border">RESPONSABILIDAD</div>
+              </div>
+            </div>
+          </div>
+          <br><hr>
+
+          <br><br>
+          
+          <h2>NUESTROS SERVICIOS </h2>
+            
+        <br><br>
+          
+          <div class="row" id="servicios">
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="img/Capturanueva.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title pt-5">Card title</h5>
+                  <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                
+                <div class="card-body">
+                  <a href="#" class="card-link">Ver mas</a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="img/captura2.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+          </div>
+          
+          <hr>
+          
+          
+          <h2 style="padding-top: 50px; padding-bottom: 40px;">PRINCIPALES CLIENTES</h2>
+          <br>
+        
+            <table class="table custom-table table-dark table-hover">
+              <thead>
+                  <tr>
+                      <th colspan="4" class="text-center">Clientes</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="table-active">
+                      <th scope="row">#1</th>
+                      <td>Isale Concept SAC</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th scope="row">#2</th>
+                      <td>Salus Preventiva SAC</td>
+                      <td></td>
+                  </tr>
+                  <tr class="table-active">
+                      <th scope="row">#3</th>
+                      <td>Sayben Arquitectura e Ingeniera</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th scope="row">#4</th>
+                      <td>Tec Estudio EIRL</td>
+                      <td></td>
+                  </tr>
+                  <tr class="table-active">
+                      <th scope="row">#5</th>
+                      <td>Rio Branco Inversiones Medicas SAC</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <th scope="row">#6</th>
+                      <td>Hidalgo y Banchini SAC</td>
+                      <td></td>
+                  </tr>
+                  <tr class="table-active">
+                      <th scope="row">#7</th>
+                      <td>Grupo RRojas SAC</td>
+                      <td></td>
+                  </tr>
+              </tbody>
+            </table>
+          
+        
+        
+        
+        <h2 style="padding-top: 35px; padding-bottom: 30px;">Ubicacion</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22067.123994611407!2d-76.81526020379582!3d-12.115351003717036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105eab31b010709%3A0xd6a8528c6a8349a5!2sC%20Lt%2C%20Tambo%20Viejo%201%2C%20Cieneguilla%2015593!5e0!3m2!1ses-419!2spe!4v1724603239380!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        
+        
+        <h2 style="padding-top: 50px; padding-bottom: 15px;">Redes sociales y contactos</h2>
+        <nav id="redes" class="redes" style="margin-bottom: 20px;">
+            <img src="img/facebook2.png">
+            <img src="img/instagram.png"> 
+            <img src="img/whatsaap.png">
+            <img src="img/gmail2.jpg">
+        </nav>
+        <footer class="bg-dark text-white text-center p-4">
+          <p>&copy; 2024 DJDJD Contratistas Generales SAC. Todos los derechos reservados.</p>
+      </footer>
+    </div>  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+        });
+    </script>
+
+    
+</body>
+</html>
